@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>CSS Template</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+   
+  </style>
+</head>
+
+<body>
+
+  <div class="header">
+    <h1>Gif Search</h1>
+    <form class="example" action="/action_page.php">
+      <input name="title" #searchTerm type="text" placeholder="Search.." name="search">
+      <button type="button" (click)="performSearch(searchTerm)"><i class="fa fa-search"></i></button>
+    </form>
+    <p>You can search any GIF with our search</p>
+    <p class="p-12">Everything you need for your creative projects, websites, banners, presentations, magazines and
+      advertising </p>
+  </div>
+
+
+  <div class="grid-container">
+    <div *ngFor="let gif of gifData" class="grid-item">
+      <img [src]="gif.images.original.url" alt="" height="auto" width="100%">
+
+    </div>
+  </div>
+
+
+  <div class="footer">
+    <p>Footer</p>
+  </div>
+
+</body>
+
+</html>
